@@ -6,10 +6,12 @@
 .attribution {
     font-size: 11px;
     text-align: center;
+    color: hsl(243, 100%, 93%);
+    margin-bottom: 5em;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(283, 100%, 79%);
 }
 
 html {
@@ -172,5 +174,6 @@ main {
     main {
         grid-template-areas: 'images container';
         margin: 20vh auto;
+        max-width: 900px;
     }
 }
