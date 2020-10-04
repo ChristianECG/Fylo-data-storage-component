@@ -14,11 +14,15 @@
 
 html {
     font-size: 60%;
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
     background-image: url(./images/bg-mobile.png);
     background-repeat: unset;
+    background-position: bottom;
+    background-color: #0c122c;
     font-family: 'Raleway', sans-serif;
     font-size: 1.4rem;
 }
@@ -53,10 +57,19 @@ img.icon {
     padding: 3em;
     border-radius: 1em 6em 1em 1em;
     font-size: 90%;
+    grid-area: images;
 }
 
 #images img:nth-child(1) {
     margin-left: 0;
+}
+
+main {
+    margin: 5vh auto;
+    display: grid;
+    grid-template-areas:
+        'images'
+        'container';
 }
 
 #container {
@@ -72,6 +85,7 @@ img.icon {
         'bar bar'
         'min max'
         'number number';
+    grid-area: container;
 }
 
 #bar {
@@ -140,4 +154,23 @@ img.icon {
 #fin-desc #numb {
     color: black;
     font-size: 3em;
+}
+
+@media screen and (min-width: 400px) {
+    #images {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    main {
+        grid-template-areas: 'images container';
+        margin: 20vh auto;
+    }
 }
