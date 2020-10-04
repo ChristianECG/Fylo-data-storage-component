@@ -167,7 +167,7 @@ main {
 @media screen and (min-width: 700px) {
     body {
         background-image: url(./images/bg-desktop.png);
-        background-repeat: no-repeat;
+        background-repeat: no-repeat
         background-position: bottom;
     }
 
